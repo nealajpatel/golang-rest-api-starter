@@ -2,7 +2,7 @@
   Golang Rest API Starter
 </h1>
 
-Boilerplate API built using Golang: (Gin Framework for routing, Testify for testing, Swagger for Documentation, Viper for configuration, and Go Mod for dependency management). The intention is for this to be used as a starter application to build out a scalable and organized API service. With minimal configuration, this application can be built and deployed into an openshift namespace. We have done some research and have tried to stick to Golang best practices as much as possible. The routes and testing can be expanded to meet your needs.
+Boilerplate API built using Golang: (Gin Framework for routing, Testify for testing, Swagger for Documentation, Viper for configuration, and Go Mod for dependency management). The intention is for this to be used as a starter application to build out a scalable and organized API service. With minimal configuration, this application can be built and deployed in a container using docker. We have done some research and have tried to stick to Golang best practices as much as possible. The routes and testing can be expanded to meet your needs.
 
 * [Gin Documentation](https://github.com/gin-gonic/gin)
 * [Testify Documentation](https://github.com/stretchr/testify)
@@ -70,7 +70,7 @@ A quick look at the top-level files and directories you'll see in this project.
 
 1. **`/utils`**: This directory contains all the util classes used throughout the app.
 
-1. **`Dockerfile`**: This file contains the buildsteps to build your image using a multi stage build. It is currently using an OpenShift image for a use case we needed but can be switched out for a scratch image.
+1. **`Dockerfile`**: This file contains the buildsteps to build your image using a multi stage build. It is currently using a scratch image, but can be switched out for a scratch image.
 
 1. **`Makefile`**: This file allows the use of make to run tests, build locally, and is used to build in the pipeline. This can be expanded as needed
 
