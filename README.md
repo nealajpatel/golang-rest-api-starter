@@ -70,7 +70,7 @@ A quick look at the top-level files and directories you'll see in this project.
 
 1. **`/utils`**: This directory contains all the util classes used throughout the app.
 
-1. **`Dockerfile`**: This file contains the buildsteps to build your image using a multi stage build. It is currently using a scratch image, but can be switched out for a scratch image.
+1. **`Dockerfile`**: This file contains the buildsteps to build your image using a multi stage build. It is currently using a scratch image to keep it lightweight.
 
 1. **`Makefile`**: This file allows the use of make to run tests, build locally, and is used to build in the pipeline. This can be expanded as needed
 
