@@ -2,6 +2,8 @@
   Golang Rest API Starter
 </h1>
 
+![CI](https://github.com/nealajpatel/golang-rest-api-starter/actions/workflows/lint.yaml/badge.svg?branch=main&event=push)
+
 Boilerplate API built using Golang: (Gin Framework for routing, Testify for testing, Swagger for Documentation, Viper for configuration, and Go Mod for dependency management). The intention is for this to be used as a starter application to build out a scalable and organized API service. With minimal configuration, this application can be built and deployed in a container using docker. We have done some research and have tried to stick to Golang best practices as much as possible. The routes and testing can be expanded to meet your needs.
 
 * [Gin Documentation](https://github.com/gin-gonic/gin)

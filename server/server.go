@@ -1,9 +1,15 @@
 package server
 
-import "golang-rest-api-starter/config"
+import (
+	"golang-rest-api-starter/config"
+	"log"
+)
 
 func Init() {
 	config := config.GetConfig()
 	r := SetupRouter()
-	r.Run(config.GetString("server.port"))
+	err := r.Run(config.GetString("server.port"))
+	if err != nil {
+		log.Fatal(err)
+	}
 }
