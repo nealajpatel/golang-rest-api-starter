@@ -14,6 +14,9 @@ func Execute(method string, url string, bearer string) (resp *http.Response, err
 
 	// Create a new request using http
 	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	// add authorization header to the req
 	req.Header.Add("Authorization", bearer)
