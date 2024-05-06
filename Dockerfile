@@ -1,7 +1,9 @@
 FROM golang:1.22.2-bullseye as builder
 RUN mkdir /build 
-ADD . /build/
 WORKDIR /build 
+COPY go.* ./
+RUN go mod download
+COPY . .
 RUN make build-prod
 RUN ls config/
 
