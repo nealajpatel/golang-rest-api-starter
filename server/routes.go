@@ -6,8 +6,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	ginSwagger "github.com/swaggo/gin-swagger"   // gin-swagger middleware
-	"github.com/swaggo/gin-swagger/swaggerFiles" // swagger embed files
+	swagFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger" // gin-swagger middleware
+	// swagger embed files
 )
 
 func SetupRouter() *gin.Engine {
@@ -34,7 +35,7 @@ func SetupRouter() *gin.Engine {
 		// docs.SwaggerInfo.Host = "cloudfactory.swagger.io"
 		// docs.SwaggerInfo.BasePath = "/v1"
 
-		swagger.GET("/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+		swagger.GET("/*any", ginSwagger.WrapHandler(swagFiles.Handler))
 	}
 
 	router.NoRoute(func(c *gin.Context) {
