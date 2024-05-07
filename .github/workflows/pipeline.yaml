@@ -77,6 +77,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           platforms: linux/amd64,linux/arm64
-          push: ${{ github.ref == 'refs/head/main' && github.event_name == 'push' && true || false }}
+          push: ${{ github.ref == 'refs/head/main' && github.event_name == 'push' || false }}
           tags: ghcr.io/nealajpatel/${{ env.IMAGE_NAME }}:${{ env.IMAGE_VERSION }}
 
