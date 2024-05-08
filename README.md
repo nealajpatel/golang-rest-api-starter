@@ -20,10 +20,6 @@ Boilerplate API built using Golang: (Gin Framework for routing, Testify for test
 
     This can be done by forking this repository into your namespace. From there you can remove the fork relationship and update the name. These can be done in the advanced settings
 
-1. **Configure runner.**
-
-    Update the gitlab-ci.yml to use a runner that can build/deploy to your namespace. If using the one provided, an admin must add your project to the runner list.
-
 1. **Update naming.**
 
     Update the golang-rest-api-starter name throughout the project to your application name. This can be done with a simple find/replace
